@@ -4,11 +4,11 @@ import logo from '../../images/carsforsale-logo.png'
 const Navbar = () => {
     const menuItems =
         <>
-            <li className='text-xl'><Link to="/">Home</Link></li>
-            <li className='text-xl'><Link to="/about">About</Link></li>
-            <li className='text-xl'><Link to="/blog">Blog</Link></li>
-            <li className='text-xl'><Link to="/contact">Contact Us</Link></li>
-            <li className='text-xl'><Link to="/login">Login</Link></li>
+            <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/">Home</Link></li>
+            <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/about">About</Link></li>
+            <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/blog">Blog</Link></li>
+            <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/contact">Contact Us</Link></li>
+            <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/login">Login</Link></li>
         </>
     return (
         <div className="flex justify-center navbar bg-warning">
@@ -25,11 +25,11 @@ const Navbar = () => {
                     <Link className=" normal-case text-xl">
                         <img src={logo} alt="" />
                     </Link>
-                    <p className='text-red-600 ml-10 text-2xl font-semibold'>Cars For Sale</p>
+                    <p className='text-red-600 ml-10 text-2xl font-extrabold'>Cars For Sale</p>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="font-semibold menu menu-horizontal p-0">
+                <ul className=" menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
             </div>
