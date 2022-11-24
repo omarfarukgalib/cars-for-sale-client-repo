@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { authContext } from '../../Context/AuthProvider';
 import logo from '../../images/carsforsale-logo.png'
 const Navbar = () => {
+    const {createLogout,user} = useContext(authContext)
+    const handleLogout = () =>{
+        createLogout()
+        .then(()=>{
+
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
     const menuItems =
         <>
             <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/">Home</Link></li>
             <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/about">About</Link></li>
             <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/blog">Blog</Link></li>
             <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/contact">Contact Us</Link></li>
-            <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/login">Login</Link></li>
+          {user?.uid?
+          
+          <>
+              <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/dashboard">Dashboard</Link></li>
+            <li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link onClick={handleLogout} to="/login">Logout</Link></li>
+          </>
+          
+          
+            :<li className='ml-2 bg-red-500 text-white rounded-md font-semibold'><Link to="/login">Login</Link></li>}
         </>
     return (
         <div className="flex justify-center navbar bg-warning">
