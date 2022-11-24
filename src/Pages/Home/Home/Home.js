@@ -1,4 +1,5 @@
 import React from 'react';
+import CarsCatagories from '../CarsCatagories/CarsCatagories';
 import HomeCarousel from '../HomeCarousel/HomeCarousel';
 import HomeSection from '../HomeSection/HomeSection';
 
@@ -8,6 +9,7 @@ const Home = () => {
             
             <HomeCarousel></HomeCarousel>
             <HomeSection></HomeSection>
+            <CarsCatagories></CarsCatagories>
         </div>
     );
 };
