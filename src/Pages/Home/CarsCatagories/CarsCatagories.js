@@ -2,7 +2,12 @@ import React from 'react';
 import title_hyundai from '../../../images/title_pic_hyundai.jpg'
 import title_nissan from '../../../images/title_pic_nissan.jpg'
 import title_honda from '../../../images/title_pic_honda.jpg'
-const CarsCatagories = () => {
+import { Link } from 'react-router-dom';
+import Hyundai from '../Hyundai/Hyundai';
+
+
+const CarsCatagories = ({id}) => {
+  
     return (
        <div>
         <div className='mt-10'>
@@ -21,7 +26,7 @@ const CarsCatagories = () => {
             Hyundai
             <div className="badge badge-secondary">Used Car</div>
           </h2>
-          <button className='text-xl font-semibold btn btn-warning'>Details Catagories</button>
+          <Link to='/hyundai'><button className='text-xl font-semibold btn btn-warning'>Details Catagories</button></Link>
           
         </div>
       </div>
@@ -32,7 +37,7 @@ const CarsCatagories = () => {
             Nissan
             <div className="badge badge-secondary">Used Car</div>
           </h2>
-          <button className='text-xl font-semibold btn btn-warning'>Details Catagories</button>
+          <Link to="/nissan" ><button className='text-xl font-semibold btn btn-warning'>Details Catagories</button></Link>
           
         </div>
       </div>
@@ -43,11 +48,12 @@ const CarsCatagories = () => {
            Honda
             <div className="badge badge-secondary">Used Car</div>
           </h2>
-          <button className='text-xl font-semibold btn btn-warning'>Details Catagories</button>
+          <Link to="/honda"><button className='text-xl font-semibold btn btn-warning'>Details Catagories</button></Link>
           
         </div>
       </div>
         </div>
+      
        </div>
     );
 };

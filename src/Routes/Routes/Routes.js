@@ -4,7 +4,12 @@ import About from "../../Pages/About/About";
 import Blog from "../../Pages/Blog/Blog";
 import Contact from "../../Pages/Contact/Contact";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
+import CarsCatagories from "../../Pages/Home/CarsCatagories/CarsCatagories";
 import Home from "../../Pages/Home/Home/Home";
+import Honda from "../../Pages/Home/Honda/Honda";
+import Hyundai from "../../Pages/Home/Hyundai/Hyundai";
+import Nissan from "../../Pages/Home/Nissan/Nissan";
+
 import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Signup/Signup";
 
@@ -17,6 +22,20 @@ const router = createBrowserRouter([
             path:'/',
             element:<Home></Home>
           },
+          {
+            path:'/hyundai',
+            element:<Hyundai></Hyundai>
+          },
+          {
+            path:'/nissan',
+            element:<Nissan></Nissan>
+          },
+          {
+            path:'/honda',
+            element:<Honda></Honda>
+          },
+         
+          
           {
             path:'/blog',
             element:<Blog></Blog>
@@ -38,7 +57,7 @@ const router = createBrowserRouter([
             path:'/signup',
             element:<Signup></Signup>
           },
-
+         
 
         ]
     },
