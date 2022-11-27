@@ -12,6 +12,7 @@ import Nissan from "../../Pages/Home/Nissan/Nissan";
 
 import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Signup/Signup";
+import Notfound from "../Notfound/Notfound";
 
 const router = createBrowserRouter([
     {
@@ -59,11 +60,16 @@ const router = createBrowserRouter([
           },
          
 
-        ]
+        ],
+       
     },
     {
         path:'/dashboard',
         element:<Dashboard></Dashboard>
+    },
+    {
+        path:'*',
+        element:<Notfound></Notfound>
     }
 ])
 export default router
