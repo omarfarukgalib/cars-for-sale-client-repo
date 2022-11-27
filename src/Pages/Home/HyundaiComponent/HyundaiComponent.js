@@ -14,7 +14,8 @@ const HyundaiComponent = ({result}) => {
           <p className='font-semibold'>Resale Price: ${resalePrice_1}</p>
           <p className='font-semibold'>Original Price: ${originalPrice_1}</p>
           <div className="card-actions justify-center">
-            <button className="btn btn-warning font-semibold w-full">Book Now</button>
+        
+            <label htmlFor="booking-modal" className="btn btn-warning font-semibold w-full">Book Now</label>
           </div>
         </div>
       </div>

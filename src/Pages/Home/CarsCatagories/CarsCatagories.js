@@ -4,6 +4,7 @@ import title_nissan from '../../../images/title_pic_nissan.jpg'
 import title_honda from '../../../images/title_pic_honda.jpg'
 import { Link } from 'react-router-dom';
 import Hyundai from '../Hyundai/Hyundai';
+import BookingModal from '../BookingModal/BookingModal';
 
 
 const CarsCatagories = ({id}) => {

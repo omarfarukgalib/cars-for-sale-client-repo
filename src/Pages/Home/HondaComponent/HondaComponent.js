@@ -14,7 +14,7 @@ const HondaComponent = ({result}) => {
           <p className='font-semibold'>Resale Price: ${resalePrice_3}</p>
           <p className='font-semibold'>Original Price: ${originalPrice_3}</p>
           <div className="card-actions justify-center">
-            <button className="btn btn-warning font-semibold w-full">Book Now</button>
+          <label htmlFor="booking-modal" className="btn btn-warning font-semibold w-full">Book Now</label>
           </div>
         </div>
       </div>

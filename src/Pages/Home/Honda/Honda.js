@@ -1,6 +1,7 @@
 import React from 'react';
 import {useQuery} from '@tanstack/react-query'
 import HondaComponent from '../HondaComponent/HondaComponent';
+import BookingModal from '../BookingModal/BookingModal';
 const Honda = () => {
     const {data:categories=[]} = useQuery({
    
@@ -10,16 +11,21 @@ const Honda = () => {
         
      })
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 px-20'>
+    <div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 px-20'>
                
-        {
-            categories.map(result=><HondaComponent
-            key={result._id}
-            result={result}
-            
-            ></HondaComponent>)
-        }
+               {
+                   categories.map(result=><HondaComponent
+                   key={result._id}
+                   result={result}
+                   
+                   ></HondaComponent>)
+               }
+               </div>
+        <div>
+               <BookingModal></BookingModal>
         </div>
+    </div>
     );
 };
 
